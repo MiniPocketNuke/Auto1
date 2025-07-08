@@ -1,4 +1,4 @@
-name: Java CI with Gradle
+name: Java CI with Maven
 
 on: [push, pull_request]
 
@@ -14,5 +14,5 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - name: Build with Gradle
-      run: ./gradlew -b ci.gradle package
+    - name: Build with Maven
+      run: mvn -B -e verify
